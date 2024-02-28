@@ -16,7 +16,14 @@ const App = () => {
         </div>
       </div>
       <div className="width-sm-container h-100">
-        <div className="height-container-navbar shadow-sm"></div>
+        <div className="height-container-navbar d-flex justify-content-between shadow-sm">
+          <div className="d-flex align-items-center h-100 p-2">
+            <p className="fs-5 p-0 m-0">Dashboard</p>
+          </div>
+          <div className="d-flex align-items-center gap-2">
+            <div className="rounded-circle p-3 bg-white"></div>
+          </div>
+        </div>
         <div className="height-container-board"></div>
       </div>
     </div>
