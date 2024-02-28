@@ -1,5 +1,3 @@
-import Accordion from 'react-bootstrap/Accordion';
-
 const Menu = (props) => {
     return(
         <ul className="m-0 p-0 list-unstyled">

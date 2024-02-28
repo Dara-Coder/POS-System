@@ -12,7 +12,7 @@ const App = () => {
           </div>
         </div>
         <div className="height-container-menu">
-          <Menu component="test"/>
+          <Menu/>
         </div>
       </div>
       <div className="width-sm-container h-100">
