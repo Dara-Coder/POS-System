@@ -1,15 +1,17 @@
 import Accordion from 'react-bootstrap/Accordion';
 
-const Menu = () => {
+const Menu = (props) => {
     return(
-        <Accordion className="rounded-0">
-            <Accordion.Item className="bg-transparent border-0" eventKey="0">
-                <Accordion.Header className="bg-transparent hidden-after">Dashboard</Accordion.Header>
-            </Accordion.Item>
-            <Accordion.Item className="bg-transparent border-0" eventKey="1">
-                <Accordion.Header className="bg-transparent hidden-after">Shop</Accordion.Header>
-            </Accordion.Item>
-        </Accordion>
+        <ul className="m-0 p-0 list-unstyled">
+            <li className="w-100 ps-2">
+                <a className="d-inline-block w-100 text-dark py-2 text-decoration-none" href="/">
+                    <span className="me-3">
+                        <i className="fa-solid fa-chart-line fa-lg"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+        </ul>
     );
 }
 
