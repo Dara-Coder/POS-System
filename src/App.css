@@ -1,0 +1,35 @@
+:root{
+    --width-lg-sidebar: 270px;
+    --height-container-logo: 60px;
+}
+
+.width-lg-sidebar{
+    width: var(--width-lg-sidebar);
+}
+
+.width-sm-container{
+    width: calc(100% - var(--width-lg-sidebar));
+}
+
+.height-container-navbar,
+.height-container-logo{
+    height: var(--height-container-logo);
+}
+
+.height-container-board,
+.height-container-menu{
+    height: calc(100% - var(--height-container-logo));
+}
+
+.hidden-after .accordion-button::after{
+    display: none;
+}
+
+.hidden-after [aria-expanded="true"]{
+    background-color:#1969ff;
+    color:#fff;
+}
+
+.hidden-after .accordion-button:focus{
+    box-shadow: none;
+}
