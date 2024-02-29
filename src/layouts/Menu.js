@@ -19,8 +19,14 @@ const Menu = () => {
             className="m-0 p-0 list-unstyled">
             {
                 [
-                    'Dashboard',
-                    'Shop'
+                    {
+                        title: 'Dashboard',
+                        icon: <i className="fa-solid fa-chart-line fa-lg"></i>
+                    },
+                    {
+                        title: 'Shop',
+                        icon: <i className="fa-solid fa-shop fa-lg"></i>
+                    }
                 ].map((nm, index) => (
                     <li
                         key={index}
@@ -28,16 +34,14 @@ const Menu = () => {
                         className="w-100 ps-2">
                         <Link
                             className="d-inline-block w-100 text-dark py-2 text-decoration-none align-menu"
-                            to={`/${nm.toLowerCase()}`}>
+                            to={`/${nm.title.toLowerCase()}`}>
                             <span
                                 className="me-3">
-                                <i
-                                    className="fa-solid fa-chart-line fa-lg">
-                                </i>
+                                {nm.icon}
                             </span>
                             <span
                                 className="text-menu">
-                                {nm}
+                                {nm.title || ''}
                             </span>
                         </Link>
                     </li>
