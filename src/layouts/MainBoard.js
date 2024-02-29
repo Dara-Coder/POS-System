@@ -4,8 +4,8 @@ const MainBoard = () => {
     return(
         <div
             className="height-container-board p-3">
-                <AppRender></AppRender>
-            </div>
+            <AppRender></AppRender>
+        </div>
     );
 }
 

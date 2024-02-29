@@ -11,7 +11,7 @@ const App = () => {
       className="d-flex h-100">
       <Router>
         <div
-          className="width-lg-sidebar h-100 shadow">
+          className="width-lg-sidebar h-100 shadow bg-white">
           <LogoSidebar></LogoSidebar>
           <div
             className="height-container-menu">

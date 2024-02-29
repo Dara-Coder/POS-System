@@ -6,8 +6,8 @@ const AppRender = () => {
     return(
         <Routes>
             <Route path="/" element={<Dashboard />} />    
-            <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/Shop" element={<Shop />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/shop" element={<Shop />} />
         </Routes>
     );
 }

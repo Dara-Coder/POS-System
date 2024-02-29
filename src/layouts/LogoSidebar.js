@@ -4,8 +4,9 @@ import logo from '../images/logo/logo.avif';
 const LogoSidebar = () => {
     const sidebar = useRef(null);
 
-    const handleClick = () => {
-        const self = sidebar.current,
+    const handleClick = (e) => {
+        const target = e.target,
+        self = sidebar.current,
         parent = self.parentElement,
         sibling = parent.nextElementSibling;
 
@@ -15,6 +16,7 @@ const LogoSidebar = () => {
             self.firstElementChild.classList.replace('d-flex','d-none');
             self.lastElementChild.classList.replace('w-25','w-100');
             sibling.classList.replace('width-sm-container','width-lg-container');
+            target.classList.add('fa-flip-horizontal');
         }
         else
         {
@@ -22,6 +24,7 @@ const LogoSidebar = () => {
             self.firstElementChild.classList.replace('d-none','d-flex');
             self.lastElementChild.classList.replace('w-100','w-25');
             sibling.classList.replace('width-lg-container','width-sm-container');
+            target.classList.remove('fa-flip-horizontal');
         }
     }
 
@@ -43,7 +46,8 @@ const LogoSidebar = () => {
                 className="d-flex align-items-center justify-content-center w-25 h-100">
                 <i
                     className="fa-solid fa-angles-left fa-lg"
-                    role="button"></i>
+                    role="button">
+                </i>
             </div>
         </div>
     );
