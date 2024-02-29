@@ -1,5 +1,6 @@
 :root{
     --width-lg-sidebar: 270px;
+    --width-sm-sidebar: 65px;
     --height-container-logo: 60px;
 }
 
@@ -7,8 +8,27 @@
     width: var(--width-lg-sidebar);
 }
 
+.width-sm-sidebar{
+    width: var(--width-sm-sidebar);
+    transition: all 0.5s;
+}
+
+.width-sm-sidebar .text-menu{
+    display: none;
+}
+
+.width-sm-sidebar .align-menu{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
 .width-sm-container{
     width: calc(100% - var(--width-lg-sidebar));
+}
+
+.width-lg-container{
+    width: calc(100% - var(--width-sm-sidebar));
 }
 
 .height-container-navbar,
