@@ -1,15 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Dashboard from '../components/Dashboard';
 import Shop from '../components/Shop';
 
 const AppRender = () => {
     return(
-        <BrowserRouter>
-            <Routes>
-                <Route path="/Dashboard" element={<Dashboard />} />
-                <Route path="/Shop" element={<Shop />} />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Dashboard />} />    
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Shop" element={<Shop />} />
+        </Routes>
     );
 }
 

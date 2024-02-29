@@ -1,8 +1,8 @@
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     return(
-        <Router>
+        <>
             <ul
                 className="m-0 p-0 list-unstyled">
                 <li
@@ -32,7 +32,7 @@ const Menu = () => {
                     </Link>
                 </li>
             </ul>
-        </Router>
+        </>
     );
 }
 
