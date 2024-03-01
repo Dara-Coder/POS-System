@@ -7,7 +7,7 @@ const AppRender = () => {
         <Routes>
             <Route path="/" element={<Dashboard />} />    
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/shop" element={<Shop />} />
+            <Route path="/product" element={<Shop />} />
         </Routes>
     );
 }
