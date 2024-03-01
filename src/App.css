@@ -44,6 +44,7 @@
 .height-container-board,
 .height-container-menu{
     height: calc(100% - var(--height-container-logo));
+    overflow-y: auto;
 }
 
 .width-height-icon{

@@ -3,7 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from '../components/Dashboard';
 import CreateProduct from '../components/CreateProduct';
 
-const AppRender = () => {
+function AppRender()
+{
     return(
         <Routes>
             <Route path="/" element={<Dashboard />} />    

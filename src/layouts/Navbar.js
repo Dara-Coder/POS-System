@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import english from '../images/icons/english.jpg';
 import user from '../images/user/profile.png';
 
-const Navbar = () => {
+function Navbar()
+{
   const location = useLocation(),
   title = location.pathname.replace(/\//g,'');
 
@@ -13,14 +14,14 @@ const Navbar = () => {
         <div
           className="d-flex align-items-center p-2 bg-secondary bg-opacity-25 rounded-5 shadow-sm flex-grow-1">
           <h5
-            className="p-0 m-0 text-uppercase">
+            className="p-0 m-0 text-uppercase text-nowrap">
             {title.replace(/-/g,' ') || 'Dashboard'}
           </h5>
         </div>
         <div
           className="d-flex align-items-center gap-2">
           <div
-            className="rounded-5 p-1 bg-secondary bg-opacity-25 shadow-sm"
+            className="rounded-5 p-1 bg-secondary bg-opacity-25 shadow-sm text-nowrap"
             role="button">
             <img
               className="rounded-circle"
@@ -41,7 +42,7 @@ const Navbar = () => {
           </i>
         </div>
         <div
-          className="rounded-5 bg-secondary bg-opacity-25 shadow-sm p-1"
+          className="rounded-5 bg-secondary bg-opacity-25 shadow-sm p-1 text-nowrap"
           role="button">
           <img
             className="rounded-circle"

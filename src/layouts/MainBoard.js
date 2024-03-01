@@ -1,17 +1,14 @@
 import React from "react";
 import AppRender from "./Route";
 
-class MainBoard extends React.Component
+function MainBoard()
 {   
-    render()
-    {
-        return(
-            <div
-                className="height-container-board p-3">
-                <AppRender></AppRender>
-            </div>
-        );
-    }
+    return(
+        <div
+            className="height-container-board p-3">
+            <AppRender></AppRender>
+        </div>
+    );
 }
 
 export default MainBoard;
