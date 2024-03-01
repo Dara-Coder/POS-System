@@ -1,4 +1,7 @@
 import MenuItem from "./MenuItem";
+import Dashboard from '../images/icons/dashboard.svg';
+import Product from '../images/icons/products.svg';
+import CreateProduct from '../images/icons/create_product.svg';
 
 const Menu = () => {
     let previousElement = null;
@@ -20,19 +23,19 @@ const Menu = () => {
             className="m-0 p-0 list-unstyled">
             <MenuItem
                 path="/dashboard"
-                icon={<i className="fa-solid fa-chart-line fa-lg"></i>}
+                icon={Dashboard}
                 title="Dashboard"
                 setActive={setActive}>
             </MenuItem>
             <MenuItem
-                icon={<i className="fa-solid fa-shop fa-lg"></i>}
+                icon={Product}
                 title="Product">
                 <ul
                     className="p-0 m-0 list-unstyled">
                     <MenuItem
                         class="ps-3"
                         path="/create-product"
-                        icon={<i className="fa-solid fa-chart-line fa-lg"></i>}
+                        icon={CreateProduct}
                         title="Create Product"
                         setActive={setActive}>
                     </MenuItem>
