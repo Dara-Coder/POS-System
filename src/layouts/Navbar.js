@@ -1,3 +1,4 @@
+import React from "react";
 import { useLocation } from "react-router-dom";
 import english from '../images/icons/english.jpg';
 import user from '../images/user/profile.png';
@@ -13,7 +14,7 @@ const Navbar = () => {
           className="d-flex align-items-center p-2 bg-secondary bg-opacity-25 rounded-5 shadow-sm flex-grow-1">
           <h5
             className="p-0 m-0 text-uppercase">
-            {title}
+            {title.replace(/-/g,' ') || 'Dashboard'}
           </h5>
         </div>
         <div

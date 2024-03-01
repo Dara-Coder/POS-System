@@ -1,13 +1,14 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from '../components/Dashboard';
-import Shop from '../components/Shop';
+import CreateProduct from '../components/CreateProduct';
 
 const AppRender = () => {
     return(
         <Routes>
             <Route path="/" element={<Dashboard />} />    
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/product" element={<Shop />} />
+            <Route path="/create-product" element={<CreateProduct />} />
         </Routes>
     );
 }

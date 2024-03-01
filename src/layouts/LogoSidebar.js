@@ -1,12 +1,12 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import logo from '../images/logo/logo.avif';
 
 const LogoSidebar = () => {
     const sidebar = useRef(null);
+    const [flip, setFlip] = useState(false);
 
     const handleClick = (e) => {
-        const target = e.target,
-        self = sidebar.current,
+        const self = sidebar.current,
         parent = self.parentElement,
         sibling = parent.nextElementSibling;
 
@@ -16,7 +16,7 @@ const LogoSidebar = () => {
             self.firstElementChild.classList.replace('d-flex','d-none');
             self.lastElementChild.classList.replace('w-25','w-100');
             sibling.classList.replace('width-sm-container','width-lg-container');
-            target.classList.add('fa-flip-horizontal');
+            setFlip(true);
         }
         else
         {
@@ -24,7 +24,7 @@ const LogoSidebar = () => {
             self.firstElementChild.classList.replace('d-none','d-flex');
             self.lastElementChild.classList.replace('w-100','w-25');
             sibling.classList.replace('width-lg-container','width-sm-container');
-            target.classList.remove('fa-flip-horizontal');
+            setFlip(false);
         }
     }
 
@@ -34,16 +34,16 @@ const LogoSidebar = () => {
             className="height-container-logo d-flex align-items-center">
             <div
                 className="d-flex align-items-center justify-content-center w-75 h-100">
-            <img
-                className="object-fit-scale"
-                src={logo}
-                alt="logo-company"
-                height={55}
-                width={55}/>
+                <img
+                    className="object-fit-scale"
+                    src={logo}
+                    alt="logo-company"
+                    height={55}
+                    width={55}/>
             </div>
             <div
                 onClick={handleClick}
-                className="d-flex align-items-center justify-content-center w-25 h-100">
+                className={`d-flex align-items-center justify-content-center h-100 ${flip ? 'fa-flip-horizontal w-100' : 'w-25'}`}>
                 <i
                     className="fa-solid fa-angles-left fa-lg"
                     role="button">

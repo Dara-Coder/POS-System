@@ -18,9 +18,14 @@
 }
 
 .width-sm-sidebar .align-menu{
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.width-lg-sidebar .align-menu{
+    display: flex;
+    align-items: flex-start;
 }
 
 .width-sm-container{
