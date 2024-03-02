@@ -1,7 +1,8 @@
 import { Fragment } from "react";
 import brand from '../images/icons/brand.svg';
 
-const Dashboard = () => {
+function Dashboard()
+{
     return(
         <Fragment>
             <div
