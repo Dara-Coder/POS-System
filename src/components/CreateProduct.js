@@ -66,6 +66,10 @@ function Shop()
                                             className="form-label">Category</label>
                                         <CreatableSelect
                                             isClearable/>
+                                        <select
+                                            className="d-none"
+                                            name="category_id"
+                                            required></select>
                                     </div>
                                 </div>
                                 <div
@@ -77,6 +81,10 @@ function Shop()
                                             className="form-label">Brand</label>
                                         <CreatableSelect
                                             isClearable/>
+                                        <select
+                                            className="d-none"
+                                            name="brand_id"
+                                            required></select>
                                     </div>
                                 </div>
                                 <div
@@ -88,6 +96,10 @@ function Shop()
                                             className="form-label">Barcode Symbology</label>
                                         <CreatableSelect
                                             isClearable/>
+                                        <select
+                                            className="d-none"
+                                            name="code_symbol"
+                                            required></select>
                                     </div>
                                 </div>
                                 <div
