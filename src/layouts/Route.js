@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from '../components/Dashboard';
-import CreateProduct from '../components/CreateProduct';
+import Dashboard from '../pages/Dashboard';
+import CreateProduct from '../pages/CreateProduct';
 
 function AppRender()
 {
