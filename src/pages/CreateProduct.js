@@ -10,7 +10,6 @@ function CreateProduct()
     const handleRoute = (route) => navigate(route);
 
     const [formData, setFormData] = useState({
-        code: '',
         name: '',
         category_id: '',
         brand_id: '',
@@ -77,8 +76,6 @@ function CreateProduct()
                                             htmlFor="code"
                                             className="form-label">Product Code</label>
                                         <input
-                                            onChange={handleChange}
-                                            value={formData.code}
                                             type="text"
                                             className="form-control"
                                             name="code"
