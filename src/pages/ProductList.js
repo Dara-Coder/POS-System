@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function ProductList()
 {
     const navigate = useNavigate();
-    const handleRoute = (route) => {
-        navigate(route);
-    }
+    const handleRoute = (route) => navigate(route);
 
     return(
         <Fragment>

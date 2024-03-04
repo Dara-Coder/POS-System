@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CreatableSelect from 'react-select/creatable';
+import Select from 'react-select'
 import validation from '../helper/Validation';
-import chooseFile from '../images/icons/choose_file.svg';
+import { chooseFile } from '../layouts/Images';
 
 function CreateProduct()
 {
     const navigate = useNavigate();
-    const handleRoute = (route) => {
-        navigate(route);
-    }
+    const handleRoute = (route) => navigate(route);
 
     const [formData, setFormData] = useState({
         code: '',
@@ -27,8 +25,8 @@ function CreateProduct()
         note: ''
     });
 
-    const handleChange = (e,obj=null) => {
-        if(e.target)
+    const handleChange = (e,name=null) => {
+        if(e && e.target)
         {
             const { name, value } = e.target;
             setFormData({
@@ -41,7 +39,7 @@ function CreateProduct()
         {
             setFormData({
                 ...formData,
-                [obj.name]: obj.option.value
+                [name]: e && e.value
             });
         }
     };
@@ -114,9 +112,8 @@ function CreateProduct()
                                         <label
                                             htmlFor="category_id"
                                             className="form-label">Category</label>
-                                        <CreatableSelect
-                                            value={formData.category_id}
-                                            onChange={handleChange}
+                                        <Select
+                                            onChange={(e) => handleChange(e,'category_id')}
                                             name="category_id"
                                             placeholder="Select A Category"
                                             isClearable/>
@@ -129,8 +126,7 @@ function CreateProduct()
                                         <label
                                             htmlFor="brand_id"
                                             className="form-label">Brand</label>
-                                        <CreatableSelect
-                                            value={formData.brand_id}
+                                        <Select
                                             onChange={handleChange}
                                             name="brand_id"
                                             placeholder="Select A Brand"
@@ -144,8 +140,7 @@ function CreateProduct()
                                         <label
                                             htmlFor="code_symbol"
                                             className="form-label">Barcode Symbology</label>
-                                        <CreatableSelect
-                                            value={formData.code_symbol}
+                                        <Select
                                             onChange={handleChange}
                                             name="code_symbol"
                                             placeholder="Select A Barcode Symbology"
@@ -195,8 +190,7 @@ function CreateProduct()
                                         <label
                                             htmlFor="unit"
                                             className="form-label">Product Unit</label>
-                                        <CreatableSelect
-                                            value={formData.unit}
+                                        <Select
                                             onChange={handleChange}
                                             name="unit"
                                             placeholder="Select A Product Unit"
@@ -266,8 +260,7 @@ function CreateProduct()
                                         <label
                                             htmlFor="tax_type"
                                             className="form-label">Tax Type</label>
-                                        <CreatableSelect
-                                            value={formData.tax_type}
+                                        <Select
                                             onChange={handleChange}
                                             name="tax_type"
                                             placeholder="Select A Tax Type"
@@ -309,7 +302,7 @@ function CreateProduct()
                 <div
                     className="d-flex mt-3">
                     <button
-                        onClick={() => handleRoute('/product-list')}
+                        onClick={() => handleRoute('/create-product')}
                         type="submit"
                         className="btn btn-sm btn-primary">
                         <span
