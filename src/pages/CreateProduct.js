@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CreatableSelect from 'react-select/creatable';
 import validation from '../helper/Validation';
+import chooseFile from '../images/icons/choose_file.svg';
 
 function CreateProduct()
 {
+    const navigate = useNavigate();
+    const handleRoute = (route) => {
+        navigate(route);
+    }
+
     const [formData, setFormData] = useState({
         code: '',
         name: '',
@@ -78,8 +85,8 @@ function CreateProduct()
                                             className="form-control"
                                             name="code"
                                             pattern="^[a-zA-Z0-9\s\-]+$"
-                                            placeholder="enter product code"
-                                            required/>
+                                            placeholder="Auto"
+                                            readOnly/>
                                     </div>
                                 </div>
                                 <div
@@ -111,6 +118,7 @@ function CreateProduct()
                                             value={formData.category_id}
                                             onChange={handleChange}
                                             name="category_id"
+                                            placeholder="Select A Category"
                                             isClearable/>
                                     </div>
                                 </div>
@@ -125,6 +133,7 @@ function CreateProduct()
                                             value={formData.brand_id}
                                             onChange={handleChange}
                                             name="brand_id"
+                                            placeholder="Select A Brand"
                                             isClearable/>
                                     </div>
                                 </div>
@@ -139,6 +148,7 @@ function CreateProduct()
                                             value={formData.code_symbol}
                                             onChange={handleChange}
                                             name="code_symbol"
+                                            placeholder="Select A Barcode Symbology"
                                             isClearable/>
                                     </div>
                                 </div>
@@ -189,6 +199,7 @@ function CreateProduct()
                                             value={formData.unit}
                                             onChange={handleChange}
                                             name="unit"
+                                            placeholder="Select A Product Unit"
                                             isClearable/>
                                     </div>
                                 </div>
@@ -259,6 +270,7 @@ function CreateProduct()
                                             value={formData.tax_type}
                                             onChange={handleChange}
                                             name="tax_type"
+                                            placeholder="Select A Tax Type"
                                             isClearable/>
                                     </div>
                                 </div>
@@ -281,13 +293,25 @@ function CreateProduct()
                             </div>
                         </div>
                     <div
-                        className="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"></div>
+                        className="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                        <div
+                            className="d-flex justify-content-center">
+                            <div
+                                className="d-flex align-items-center justify-content-center border rounded-3 width-height-product-chooser" role="button">
+                                <img
+                                    className="object-fit-scale"
+                                    src={chooseFile}
+                                    alt="choose-file"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div
                     className="d-flex mt-3">
                     <button
+                        onClick={() => handleRoute('/product-list')}
                         type="submit"
-                        className="btn btn-primary">
+                        className="btn btn-sm btn-primary">
                         <span
                             className="text-nowrap">Submit Product</span>
                     </button>

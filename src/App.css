@@ -48,8 +48,8 @@
 }
 
 .width-height-icon{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .bg-primary .filter-icon{
@@ -88,4 +88,14 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
     padding: 0;
+}
+
+.width-height-product-chooser{
+    width: 250px;
+    height: 250px;
+}
+
+.width-search-input{
+    width: 250px;
+    min-width: 200px;
 }

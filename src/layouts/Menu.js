@@ -1,7 +1,10 @@
 import MenuItem from "./MenuItem";
-import Dashboard from '../images/icons/dashboard.svg';
-import Product from '../images/icons/products.svg';
-import CreateProduct from '../images/icons/create_product.svg';
+import {
+    Dashboard,
+    Product,
+    CreateProduct,
+    ProductList
+} from "./Images";
 
 function Menu(props)
 {
@@ -26,6 +29,12 @@ function Menu(props)
                             path="/create-product"
                             icon={CreateProduct}
                             title="Create Product">
+                        </MenuItem>
+                        <MenuItem
+                            class="ps-3"
+                            path="/product-list"
+                            icon={ProductList}
+                            title="Product List">
                         </MenuItem>
                     </ul>
                 </MenuItem>

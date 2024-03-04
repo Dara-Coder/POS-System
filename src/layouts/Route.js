@@ -1,7 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from '../pages/Dashboard';
-import CreateProduct from '../pages/CreateProduct';
+import {
+    Dashboard,
+    CreateProduct,
+    ProductList
+} from "./Pages";
 
 function AppRender()
 {
@@ -10,6 +13,7 @@ function AppRender()
             <Route path="/" element={<Dashboard />} />    
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/create-product" element={<CreateProduct />} />
+            <Route path="/product-list" element={<ProductList />}></Route>
         </Routes>
     );
 }
