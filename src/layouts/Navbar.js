@@ -1,13 +1,11 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-import english from '../images/icons/english.jpg';
-import user from '../images/user/profile.png';
+import {
+  User,
+  English
+} from "./Images";
 
-function Navbar()
+function Navbar(props)
 {
-  const location = useLocation(),
-  title = location.pathname.replace(/\//g,'');
-
   return(
     <div
       className="height-container-navbar d-flex justify-content-between align-items-center gap-3 px-3">
@@ -15,7 +13,7 @@ function Navbar()
           className="d-flex align-items-center p-2 bg-secondary bg-opacity-25 rounded-5 shadow-sm flex-grow-1">
           <h5
             className="p-0 m-0 text-uppercase text-nowrap">
-            {title.replace(/-/g,' ') || 'Dashboard'}
+            {props.title || 'Dashboard'}
           </h5>
         </div>
         <div
@@ -25,7 +23,7 @@ function Navbar()
             role="button">
             <img
               className="rounded-circle"
-              src={english}
+              src={English}
               alt="image-language"
               height={25}
               width={25}/>
@@ -46,7 +44,7 @@ function Navbar()
           role="button">
           <img
             className="rounded-circle"
-            src={user}
+            src={User}
             alt="user-image"
             height={30}
             width={30}/>

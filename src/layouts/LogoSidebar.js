@@ -8,6 +8,7 @@ import logo from '../images/logo/logo.avif';
 function LogoSidebar()
 {
     const sidebar = useRef(null);
+    const [title, setTitle] = useState('Dashboard');
     const [flip, setFlip] = useState(false);
 
     const handleClick = () => {
@@ -48,11 +49,14 @@ function LogoSidebar()
                         </i>
                     </div>
                 </div>
-                <Menu hidden={flip}/>
+                <Menu
+                    hidden={flip}
+                    title={setTitle}/>
             </div>
             <div
                 className={`${flip ? 'width-lg-container' : 'width-sm-container'} h-100`}>
-                <Navbar />
+                <Navbar
+                    title={title}/>
                 <MainBoard />
             </div>
         </Router>

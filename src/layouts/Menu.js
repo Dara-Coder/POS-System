@@ -16,7 +16,9 @@ function Menu(props)
                 <MenuItem
                     path="/dashboard"
                     icon={Dashboard}
-                    title="Dashboard">
+                    title="Dashboard"
+                    Title="Dashboard"
+                    setTitle={props.title}>
                 </MenuItem>
                 <MenuItem
                     icon={Product}
@@ -28,13 +30,17 @@ function Menu(props)
                             class="ps-3"
                             path="/create-product"
                             icon={CreateProduct}
-                            title="Create Product">
+                            title="Create Product"
+                            Title="Create Product"
+                            setTitle={props.title}>
                         </MenuItem>
                         <MenuItem
                             class="ps-3"
                             path="/product-list"
                             icon={ProductList}
-                            title="Product List">
+                            title="Product List"
+                            Title="Product List"
+                            setTitle={props.title}>
                         </MenuItem>
                     </ul>
                 </MenuItem>
