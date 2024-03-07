@@ -17,7 +17,7 @@ function Navbar(props)
           className="d-flex align-items-center p-2 bg-secondary bg-opacity-25 rounded-5 shadow-sm flex-grow-1">
           <h5
             className="p-0 m-0 text-uppercase text-nowrap">
-            {props.title || title.replace(/\-/g,' ')}
+            {props.title || title.replace(/\-/g,' ') || 'Dashboard'}
           </h5>
         </div>
         <div

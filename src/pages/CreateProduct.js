@@ -225,6 +225,7 @@ function CreateProduct()
                                             className="form-control"
                                             name="alert_stock"
                                             placeholder="0"
+                                            min={0}
                                             required/>
                                     </div>
                                 </div>
