@@ -28,7 +28,7 @@ function LogoSidebar()
         <Router>
             <div
                 ref={sidebar}
-                className={`${flip ? 'width-sm-sidebar' : 'width-lg-sidebar'} h-100 shadow bg-white`}>
+                className={`${flip ? 'width-sm-sidebar' : 'width-lg-sidebar'} d-none d-lg-block d-xl-block d-xxl-block h-100 shadow bg-white position-md-absolute`}>
                 <div
                     className="height-container-logo d-flex align-items-center">
                     <div
@@ -54,9 +54,10 @@ function LogoSidebar()
                     title={setTitle}/>
             </div>
             <div
-                className={`${flip ? 'width-lg-container' : 'width-sm-container'} h-100`}>
+                className={`${flip ? 'width-lg-container' : 'width-sm-container'} h-100 w-sm-100 w-md-100`}>
                 <Navbar
-                    title={title}/>
+                    title={title}
+                    sidebar={sidebar}/>
                 <MainBoard />
             </div>
         </Router>

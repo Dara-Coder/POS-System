@@ -60,6 +60,8 @@
     text-transform: capitalize;
     font-size: small;
     opacity: 0.6;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
 }
 
 ::-webkit-scrollbar {
@@ -102,4 +104,64 @@ input[type=number]::-webkit-outer-spin-button {
 .width-search-input{
     width: 250px;
     min-width: 200px;
+}
+
+.on-active:active{
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.on-active:hover{
+    background-color: var(--bs-gray-200);
+    color: var(--bs-black);
+}
+
+@media screen and (max-width: 576px){
+    .w-sm-100{
+        width: 100%;
+    }
+
+    .position-sm-absolute{
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .w-md-100{
+        width: 100%;
+    }
+
+    .position-md-absolute{
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .w-lg-100{
+        width: 100%;
+    }
+
+    .position-lg-absolute{
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .w-xl-100{
+        width: 100%;
+    }
+
+    .position-xl-absolute{
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .w-xxl-100{
+        width: 100%;
+    }
+
+    .position-xxl-absolute{
+        position: absolute;
+    }
 }

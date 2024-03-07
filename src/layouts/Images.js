@@ -10,3 +10,4 @@ export { default as Sales } from '../images/icons/sales.png'
 export { default as Purchases } from '../images/icons/purchases.png';
 export { default as Returns } from '../images/icons/returns.png';
 export { default as CustomerList } from '../images/icons/customer_list.png';
+export { default as Khmer } from '../images/icons/khmer.png';

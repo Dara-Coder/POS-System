@@ -9,7 +9,7 @@ function ProductList()
     return(
         <Fragment>
             <div
-                className="d-flex justify-content-between gap-2 bg-white p-3 rounded-3 border">
+                className="d-flex justify-content-between gap-2 bg-white p-3 rounded-3 border animate__animated animate__fadeInRight">
                 <div
                     className="input-group input-group-sm flex-nowrap width-search-input">
                     <input
@@ -31,7 +31,7 @@ function ProductList()
                 </button>
             </div>
             <div
-                className="bg-white rounded-3 p-3 border mt-3"></div>
+                className="bg-white rounded-3 p-3 border mt-3 animate__animated animate__fadeInRight"></div>
         </Fragment>
     );
 }
