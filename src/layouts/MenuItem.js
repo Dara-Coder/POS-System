@@ -21,7 +21,9 @@ function MenuItem(props)
                         <img
                             className="width-height-icon"
                             src={props.icon || ''}
-                            alt={props.title || ''}/>
+                            alt={props.title || ''}
+                            width={25}
+                            height={25}/>
                     </span>
                     <span
                         className="text-menu">
@@ -50,7 +52,9 @@ function MenuItem(props)
                         <img
                             className="filter-icon width-height-icon object-fit-scale"
                             src={props.icon}
-                            alt={props.title || ''}/>
+                            alt={props.title || ''}
+                            width={25}
+                            height={25}/>
                     </span>
                     <span
                         className="text-menu">

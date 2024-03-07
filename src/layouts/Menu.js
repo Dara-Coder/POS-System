@@ -3,7 +3,12 @@ import {
     Dashboard,
     Product,
     CreateProduct,
-    ProductList
+    ProductList,
+    Category,
+    Sales,
+    Purchases,
+    Returns,
+    CustomerList
 } from "./Images";
 
 function Menu(props)
@@ -43,6 +48,41 @@ function Menu(props)
                             setTitle={props.title}>
                         </MenuItem>
                     </ul>
+                </MenuItem>
+                <MenuItem
+                    path="/category"
+                    icon={Category}
+                    title="Category"
+                    Title="Category"
+                    setTitle={props.title}>
+                </MenuItem>
+                <MenuItem
+                    icon={Sales}
+                    title="Sales"
+                    hidden={props.hidden}>
+                    <ul
+                        className="p-0 m-0 list-unstyled"></ul>
+                </MenuItem>
+                <MenuItem
+                    path="/purchases"
+                    icon={Purchases}
+                    title="Purchases"
+                    Title="Purchases"
+                    setTitle={props.title}>
+                </MenuItem>
+                <MenuItem
+                    path="/returns"
+                    icon={Returns}
+                    title="Returns"
+                    Title="Returns"
+                    setTitle={props.title}>
+                </MenuItem>
+                <MenuItem
+                    path="/customer-list"
+                    icon={CustomerList}
+                    title="Customer List"
+                    Title="Customer List"
+                    setTitle={props.title}>
                 </MenuItem>
             </ul>
         </div>
