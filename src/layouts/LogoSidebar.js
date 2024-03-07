@@ -8,7 +8,7 @@ import logo from '../images/logo/logo.avif';
 function LogoSidebar()
 {
     const sidebar = useRef(null);
-    const [title, setTitle] = useState('Dashboard');
+    const [title, setTitle] = useState(null);
     const [flip, setFlip] = useState(false);
 
     const handleClick = () => {
