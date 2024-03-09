@@ -95,9 +95,11 @@ input[type=number]::-webkit-outer-spin-button {
 .width-height-product-chooser{
     width: 250px;
     height: 250px;
+    overflow: hidden;
+    position: relative;
 }
 
-.width-height-product-chooser img{
+.width-height-product-chooser img.choose-image{
     width: 50px;
 }
 

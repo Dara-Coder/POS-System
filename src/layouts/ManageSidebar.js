@@ -16,19 +16,13 @@ function ManageSidebar(props)
 
     if(open)
     {
-        if(sidebar)
-        {
-            sidebar.classList.remove('d-none');
-            sidebar.classList.add('d-block','z-2');
-        }
+        sidebar?.classList.remove('d-none');
+        sidebar?.classList.add('d-block','z-2');
     }
     else
     {
-        if(sidebar)
-        {
-            sidebar.classList.add('d-none');
-            sidebar.classList.remove('d-block','z-2');
-        }
+        sidebar?.classList.add('d-none');
+        sidebar?.classList.remove('d-block','z-2');
     }
 
     return(

@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Menu from './Menu.js';
-import Navbar from './Navbar.js';
-import MainBoard from './MainBoard.js';
-import logo from '../images/logo/logo.avif';
+import Menu from './Menu';
+import Navbar from './Navbar';
+import MainBoard from './MainBoard';
+import { Logo } from './Images'; 
 
 function LogoSidebar()
 {
@@ -14,7 +14,7 @@ function LogoSidebar()
     const handleClick = () => {
         const self = sidebar.current;
 
-        if(self.classList.contains('width-lg-sidebar'))
+        if(self?.classList.contains('width-lg-sidebar'))
         {
             setFlip(true);
         }
@@ -35,7 +35,7 @@ function LogoSidebar()
                         className={`${flip ? 'd-none' : 'd-flex align-items-center justify-content-center'} w-75 h-100`}>
                         <img
                             className="object-fit-scale"
-                            src={logo}
+                            src={Logo}
                             alt="logo-company"
                             height={55}
                             width={55}/>
