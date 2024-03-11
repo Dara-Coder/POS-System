@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Select from 'react-select'
 import Helper from '../helper/Helper';
+import ImagesHelper from '../helper/ImageHelper';
 import { chooseFile } from '../layouts/Images';
 
 function CreateProduct()
@@ -296,7 +297,10 @@ function CreateProduct()
                                 className="d-flex align-items-center justify-content-center border rounded-3 width-height-product-chooser"
                                 role="button">
                                 <div
-                                    onClick={Helper.ImagesHelper}
+                                    onClick={(e) => ImagesHelper({
+                                        target: e.target,
+                                        fun: ImagesHelper
+                                    })}
                                     className="d-flex align-items-center justify-content-center w-100 h-100">
                                     <img
                                         className="object-fit-scale choose-image"
