@@ -16,13 +16,13 @@ function ManageLanguage()
 
     useEffect(() => {
         const langElement = langRef.current;
-        document.onmouseup = function(e)
+        document.addEventListener('mouseup',function(e)
         {
             if(langElement && !langElement.contains(e.target))
             {
                 setShow(false);
             }
-        };
+        });
     });
 
     return(

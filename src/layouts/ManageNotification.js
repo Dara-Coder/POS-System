@@ -7,13 +7,13 @@ function ManageNotifications()
 
     useEffect(() => {
         const notificationElement = notificationRef.current;
-        document.onmouseup = function(e)
+        document.addEventListener('mouseup',function(e)
         {
-            if(notificationElement &&!notificationElement.contains(e.target))
+            if(notificationElement && !notificationElement.contains(e.target))
             {
                 setShow(false);
             }
-        }
+        });
     });
 
     return(

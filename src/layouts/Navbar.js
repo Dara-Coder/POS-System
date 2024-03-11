@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ManageLanguage from "./ManageLanguage";
 import ManageUser from "./ManageUser";
@@ -8,8 +8,20 @@ import ManageSidebar from "./ManageSidebar";
 function Navbar(props)
 {
   const location = useLocation();
+  const menuRef = useRef(null);
   const [open, setOpen] = useState(false);
   const title = location.pathname.replace(/\//g,'').replace(/\-/g,' ');
+
+  useEffect(() => {
+    const menuElement = menuRef.current;
+    document.addEventListener('mouseup',function(e)
+    {
+      if(menuElement && !menuElement.contains(e.target))
+      {
+        setOpen(false);
+      }
+    });
+  });
 
   return(
     <div
@@ -31,6 +43,7 @@ function Navbar(props)
           className="fa-solid fa-sliders fa-lg"></i>
       </button>
       <div
+        ref={menuRef}
         className={`${open ? 'd-flex d-sm-flex position-absolute flex-column bg-white rounded-3 border shadow z-3 menu-container p-2 animate__animated animate__jackInTheBox' : 'd-none d-sm-none'} d-md-flex d-lg-flex d-xl-flex d-xxl-flex align-items-center gap-2`}>
         <ManageLanguage/>
         <ManageNotifications/>

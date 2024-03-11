@@ -8,13 +8,13 @@ function ManageUser()
 
     useEffect(() => {
         const userElement = userRef.current;
-        document.onmouseup = function(e)
+        document.addEventListener('mouseup',function(e)
         {
             if(userElement && !userElement.contains(e.target))
             {
                 setShow(false);
             }
-        };
+        });
     });
 
     return(
