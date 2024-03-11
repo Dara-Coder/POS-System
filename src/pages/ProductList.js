@@ -9,7 +9,7 @@ function ProductList()
     return(
         <Fragment>
             <div
-                className="d-flex justify-content-between gap-2 bg-white p-3 rounded-3 border animate__animated animate__fadeInRight">
+                className="d-flex justify-content-between gap-2 bg-white p-3 rounded-3 border overflow-y-hidden overflow-x-auto animate__animated animate__fadeInRight">
                 <div
                     className="input-group input-group-sm flex-nowrap width-search-input">
                     <input
