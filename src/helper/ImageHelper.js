@@ -10,7 +10,6 @@ function ImagesHelper(options)
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = options.accept || 'image/*';
-    input.capture = options.capture || 'user';
 
     const setChooser = (options) => {
         const chooser = <Fragment>
