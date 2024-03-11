@@ -9,7 +9,8 @@ function ImagesHelper(options)
     parent = parent || ReactDOM.createRoot(options.target.closest('div[role=\'button\']'));
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = options || 'image/*';
+    input.accept = options.accept || 'image/*';
+    input.capture = options.capture || 'user';
 
     const setChooser = (options) => {
         const chooser = <Fragment>
