@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 const columns = [
     {
+        name: 'Photo'
+    },
+    {
         name: 'Code',
         selector: row => row.code
     },
@@ -18,6 +21,9 @@ const columns = [
     {
         name: 'Price',
         selector: row => row.price
+    },
+    {
+        name: 'Action'
     }
 ];
 

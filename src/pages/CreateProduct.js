@@ -31,7 +31,7 @@ function CreateProduct()
             const { name, value } = e.target;
             setFormData({
                 ...formData,
-                [name]: value,
+                [name]: value
             });
             Helper.Validation(e);
         }
