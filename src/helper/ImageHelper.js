@@ -2,11 +2,9 @@ import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom/client';
 import { chooseFile } from '../layouts/Images';
 
-let parent = null;
-
 function ImagesHelper(options)
 {
-    parent = parent || ReactDOM.createRoot(options.target.closest('div[role=\'button\']'));
+    const parent = options.parent || ReactDOM.createRoot(options.target.closest('div[role=\'button\']'));
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = options.accept || 'image/*';
@@ -15,7 +13,7 @@ function ImagesHelper(options)
         const chooser = <Fragment>
             <div
                 onClick={(e) => ImagesHelper({
-                    target: e.target,
+                    parent: options.parent,
                     fun: options.fun
                 })}
                 className="d-flex align-items-center justify-content-center w-100 h-100">
@@ -25,7 +23,7 @@ function ImagesHelper(options)
                     alt="choose-file"/>
             </div>
         </Fragment>;
-        parent.render(chooser);
+        options.parent.render(chooser);
     }
 
     input.onchange = function(e)
