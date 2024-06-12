@@ -1,6 +1,4 @@
 class Helper{
-    constructor(){}
-
     Validation(e)
     {
         const input = e.target;
